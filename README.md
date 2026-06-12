@@ -25,7 +25,7 @@ ai-phishing-detector/
 
 ## Installation & Setup
 
-### 1. Backend Setup
+1. Backend Setup
 ```bash
 cd backend
 python -m venv venv
@@ -33,7 +33,7 @@ python -m venv venv
 pip install -r requirements.txt
 python main.py
 
-### 2. Frontend Setup
+2. Frontend Setup
 ```bash
 cd frontend
 npm install
