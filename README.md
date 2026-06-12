@@ -11,7 +11,7 @@ A full-stack web application that uses Machine Learning to detect and classify p
 ## Tech Stack
 - **Machine Learning**: Python, Scikit-Learn, Pandas
 - **Backend**: FastAPI, Uvicorn
-- **Frontend**: React.js, Tailwind CSS
+- **Frontend**: React.js, Vite
 - **Deployment**: *(To be added)*
 
 ## Project Structure
@@ -21,3 +21,21 @@ ai-phishing-detector/
 ├── frontend/       # React application
 ├── model/          # Jupyter notebooks and trained .pkl model files
 └── README.md
+
+
+## Installation & Setup
+
+### 1. Backend Setup
+```bash
+cd backend
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python main.py
+
+### 2. Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+
