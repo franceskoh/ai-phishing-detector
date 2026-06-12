@@ -5,3 +5,6 @@ __pycache__/
 venv/
 *.pkl
 .DS_Store
+backend/venv/
+frontend/node_modules/
+frontend/dist/

@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.subtitle {
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #2d3748;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.button:hover:not(:disabled) {
+  background: #1a202c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.button:disabled {
+  background: #718096;
+  cursor: not-allowed;
+}
+
+.error {
+  background: #fc8181;
+  color: #742a2a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.result {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.result h2 {
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+  text-align: center;
+}
+
+.result-content {
+  margin-bottom: 2rem;
+}
+
+.prediction, .confidence, .url-display {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #f7fafc;
+  border-radius: 8px;
+}
+
+.label {
+  font-weight: bold;
+  color: #4a5568;
+}
+
+.value {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.result.danger .prediction .value {
+  color: #e53e3e;
+  font-size: 1.5rem;
+}
+
+.result.safe .prediction .value {
+  color: #38a169;
+  font-size: 1.5rem;
+}
+
+.features h3 {
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.feature-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: #edf2f7;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .form {
+    flex-direction: column;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
